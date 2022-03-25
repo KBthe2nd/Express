@@ -36,7 +36,7 @@ app.post("/contact-form", (req, res, next) => {
   next();
 });
 
-fs.get("/formsubmission", (req, res, next) => {
+app.get("/formsubmission", (req, res, next) => {
   fs.readFile(path.join(__dirname, "/express.json"), (err, data) => {
     JSON.parse(data).array.forEach((form) => {});
     res.send(JSON.parse(data));
